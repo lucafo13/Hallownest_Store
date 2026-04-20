@@ -1,0 +1,139 @@
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: var(--regular);
+  cursor: url(t/normal.png), auto;
+}
+@font-face {
+  font-family: "hk_regular";
+  src: url(fontehk/TrajanPro-Regular.woff);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --font-title: 30px;
+  --font-comun: 20px;
+  --himg: 194px;
+  --wimg: 260px;
+  --font-hyper-title: 60px;
+  --transblack: rgba(15, 15, 15, 0.5);
+  --cornflowerblue: rgba(100, 149, 237, 0.7);
+  --regular: "hk_regular";
+}
+nav {
+  position: relative;
+}
+
+ul {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid white;
+  font-family: var(--regular);
+  font-size: 19px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: 99;
+  width: 99%;
+  top: 0;
+}
+h1,
+h2 {
+  color: #ffffff;
+  justify-content: center;
+  display: flex;
+
+  font-family: var(--regular);
+}
+h1 {
+  font-size: var(--font-hyper-title);
+}
+h2 {
+  font-size: var(--font-title);
+}
+ul li {
+  float: left;
+}
+ul a {
+  float: right;
+}
+ul img {
+  height: 40x;
+  width: 50px;
+}
+ul li a {
+  padding: clamp(8px, 1vw, 14px) clamp(10px, 2vw, 14px);
+  background-color: black;
+  border-left: 1px solid white;
+  text-decoration: none;
+  color: white;
+
+  transition: 0.5s;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+.final {
+  border-right: 1px solid white;
+}
+ul li:hover a {
+  background-color: white;
+  color: #000000;
+  border: none;
+  transform: translateY(-5px) scale(1.02);
+  cursor: url(t/Handwritingr.png), auto;
+}
+ul li a::after {
+  content: "";
+  width: 0%;
+  left: 0;
+  height: 3px;
+  bottom: 2px;
+  background: black;
+  position: absolute;
+  transition: 0.6s;
+}
+ul li a:hover::after {
+  width: 100%;
+}
+.cover-blur {
+  width: 90%;
+  min-height: 100vh;
+  display: flow-root;
+  border: none;
+  backdrop-filter: blur(5px);
+  background-color: rgba(15, 15, 15, 0.7);
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 5%;
+}
+.cover-blur-foot {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  border: none;
+  backdrop-filter: blur(5px);
+  background-color: rgba(15, 15, 15, 0.7);
+  margin: 0 auto;
+  padding: 0;
+}
+ul span {
+  padding: 16px 16px;
+  margin-left: 10%;
+  color: white;
+}
+footer {
+  border-top: 2px solid white;
+  max-height: 150px;
+  height: 100%;
+}

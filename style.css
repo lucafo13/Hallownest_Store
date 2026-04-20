@@ -1,0 +1,282 @@
+body {
+  background-image: url(imagenstrabaio/tstbg.webp);
+}
+.card {
+  display: grid;
+  color: white;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: rgba(12, 12, 12, 0.1);
+  width: 20%;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  transition: 0.5s;
+  width: auto;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 50px;
+  padding: 10px 10px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  max-width: 300px;
+}
+
+.card h1 {
+  font-family: var(--regular);
+  font-size: 30px;
+  justify-content: center;
+  display: flex;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.card img {
+  border-radius: 10px;
+  border: 1px solid white;
+  max-width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: 0.5s;
+  margin: 15px 0;
+}
+.card span,
+p {
+  font-family: var(--regular);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: 0.5s;
+  text-align: center;
+  padding: auto;
+}
+.card a:hover {
+  color: black;
+  background-color: #ffffff;
+}
+.card a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--regular);
+  font-size: var(--font-comun);
+  padding: 16px 16px;
+  background-color: #2a2a2a;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  justify-content: center;
+  cursor: url(imagenstrabaio/selecte.png), auto;
+}
+.card a::after {
+  content: "";
+  width: 0%;
+  background: black;
+  height: 5px;
+  position: absolute;
+  transition: 0.4s all ease;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+}
+.card a:hover::after {
+  width: 100%;
+}
+.card:hover {
+  border: 2px solid white;
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+.card:hover img {
+  /* border: 1px solid cornflowerblue;  n gsotei da cor sorry*/
+}
+.card:hover p {
+  /* border: 1px solid cornflowerblue; */
+}
+.card:hover span {
+  /* border: 1px solid cornflowerblue; */
+}
+.card a:hover {
+  transform: translateY(-5px);
+  cursor: url(t/Handwritingr.png), auto;
+}
+#s1 {
+  text-align: center;
+}
+.hold {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+h1,
+h2 {
+  color: #ffffff;
+  justify-content: center;
+  display: flex;
+
+  font-family: var(--regular);
+}
+h1 {
+  font-size: var(--font-hyper-title);
+}
+h2 {
+  font-size: var(--font-title);
+}
+.repre {
+  display: grid;
+  border: 1px solid #ffffff;
+  max-height: 400px;
+  border-radius: 10px;
+  max-width: 90%;
+  justify-content: center;
+  margin: 0 auto;
+  transition: 0.5s all;
+}
+.repre:hover {
+  border: 4px solid #ffff;
+  box-shadow: rgba(255, 255, 255, 0.5) 0 20px 20px;
+  transform: translateY(-5px) scale(1.01);
+}
+.repre:hover h1 {
+  border-bottom: 4px solid #fff;
+  font-weight: bolder;
+}
+.repre div {
+  display: inline-flex;
+}
+.repre div h2 {
+  padding: 17px 17px;
+}
+.repre h1 {
+  border-bottom: 1px solid #ffffff;
+  transition: 0.5s;
+}
+.repre div img {
+  margin-top: -20px;
+  padding: 15px 15px;
+  position: relative;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 40px;
+}
+
+.inipage {
+  padding: 100px 100px;
+  display: inline-flex;
+
+  position: relative;
+}
+.bottom {
+  margin-bottom: -3%;
+}
+.logo-div {
+  width: 500px;
+  height: 500px;
+}
+.logo-div img {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  left: -30%;
+  top: -10%;
+  transition: 0.6s ease;
+}
+.logo-div img:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+}
+.scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s all ease;
+}
+.scroll.sled {
+  opacity: 1;
+  transform: translateY(0);
+}
+.musbutton {
+  font-family: var(--regular);
+  font-size: 24px;
+  border-radius: 10px;
+  width: 300px;
+  height: 50px;
+  background-color: rgba(15, 15, 15, 0.5);
+  color: white;
+  backdrop-filter: blur(5px);
+  transition: all 0.5s;
+}
+.musbutton:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: #ffffff 0 10px 10px;
+  color: #000000;
+  background-color: white;
+  cursor: url(t/Handwriting.png), auto;
+}
+.risc {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.hollow:hover {
+  background-color: #000000;
+  color: black;
+  border: #000000 solid 1px;
+}
+.hollo {
+  color: transparent;
+  transition: 0.6s;
+}
+.hollow:hover .hollo {
+  color: white;
+}
+.hollow:hover .h1 {
+  color: transparent;
+}
+.h1 {
+  transition: 0.6s;
+}
+.foot-inside {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  border: #000000 solid;
+  text-align: center;
+  height: auto;
+}
+.smedia {
+  display: grid;
+}
+.cover-blur-foot span {
+  color: white;
+  display: inline;
+  width: 100%;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  transition: 0.5s all ease;
+  height: auto;
+  font-family: var(--regular);
+}
+.cover-blur-foot span:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+.img-foot {
+  display: flex;
+  position: relative;
+  top: -40%;
+  right: -40%;
+  display: flex;
+  margin-bottom: -150px;
+  height: auto;
+}
+.img-foot img {
+  display: flexbox;
+}
