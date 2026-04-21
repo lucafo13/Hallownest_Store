@@ -59,6 +59,16 @@ h1 {
 h2 {
   font-size: var(--font-title);
 }
+.extra {
+  padding: clamp(8px, 1vw, 14px) clamp(10px, 2vw, 14px);
+  background-color: black;
+  border-left: 1px solid white;
+  text-decoration: none;
+  color: white;
+  float: right;
+  border-right: 1px solid white;
+  margin-right: -100%;
+}
 ul li {
   float: left;
 }
@@ -75,7 +85,6 @@ ul li a {
   border-left: 1px solid white;
   text-decoration: none;
   color: white;
-
   transition: 0.5s;
   justify-content: center;
   align-items: center;

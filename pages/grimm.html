@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../imagenstrabaio/logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="style.css">
-    <title>The grimm troupe</title>
+    <title>Gods and Nightmares</title>
   </head>
   <body>
         <header class="head">
@@ -18,11 +18,14 @@
                 <li><a href="#s3" id="s33">promoções</a></li>
                 <li><a href="#s4" class="final" >end</a></li>
                 <span>Hollow knight > HK silksong</span>
-                <img src="../imagenstrabaio/logo.jpg" alt="">
+                <a href="../index.html"><img src="../imagenstrabaio/logo.jpg" alt=""></a>
             </ul>
         </nav>
     </header>
     <main >
+        <audio hidden loop id="m1">
+            <source src="../audios/grimmost.mp3">
+        </audio>
         <audio hidden id="m4">
             <source src="audios/grub-sound-1-hollow-knight_UZbglQq.mp3">
         </audio>
@@ -38,7 +41,58 @@
         <section id="s1" class="descrition cover-blur scroll"  >
             <img src="../imagenstrabaio/tgtee.png" alt="">
             <br><br>
-            <h1>Bem vindo a Trupa de Grimm</h1>
+            <h1>Bem vindo a Trupa de Grimm</h1> <br><br>
+                                <article class="repre">
+                        <h1>Bem vindo!</h1>
+                        <div >
+                            <img src="https://static.wikia.nocookie.net/villains/images/c/c0/Grimm_Nightmare_King.png/revision/latest/scale-to-width/360?cb=20200521013801" alt="">
+                            <h2>Seja bem vindo a Trupe de grimm, esqueça os sonhos, navegue nos mais medonhos dos pesadelos, busque a essência, renove o ciclo >:) </h2>
+                        </div>
+                    </article> <br><br>
+                    <h2>Pesadelos te aguardam aqui...</h2>
+                    <br><br>
+                    <button class="musbutton" id="msbutton">Melodia de fundo</button>
+                    <br><br>
+        </section>
+        <section class="cover-blur scroll">
+            <h1>O que temos a oferecer:</h1>
+            <section class="hold">
+                <article class="card scroll">
+                    <div>
+                        <h1>Essência pesadelo</h1>
+                    </div>
+                    <div class="conteudo">
+                        <img src="" alt="">
+                        <span></span>
+                        <p></p>
+                    </div>
+                </article>
+                <article class="card scroll">
+                    <div>
+                        <h1>ferrão dos sonhos</h1>
+                    </div>
+                    <div class="conteudo">
+                        <img src="" alt="">
+                        <span></span>
+                        <p></p>
+                    </div>
+                </article>
+            </section>
         </section>
   </body>
+  <script>
+    
+const button = document.getElementById("msbutton");
+const m1 = document.getElementById("m1")
+button.addEventListener("click", function () {
+  if (m1.paused) {
+    m1.play();
+    button.innerText = "Pausar Música";
+  } else {
+    m1.pause();
+    button.innerText = "Melodia de fundo";
+  }
+});
+
+  </script>
 </html>
