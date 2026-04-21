@@ -27,7 +27,7 @@
             <source src="../audios/grimmost.mp3">
         </audio>
         <audio hidden id="m4">
-            <source src="audios/grub-sound-1-hollow-knight_UZbglQq.mp3">
+            <source src="../audios/grub-sound-1-hollow-knight_UZbglQq.mp3">
         </audio>
         <audio loop hidden id="m3">
             <source src="audios/dm.mp3">
@@ -54,7 +54,7 @@
                     <button class="musbutton" id="msbutton">Melodia de fundo</button>
                     <br><br>
         </section>
-        <section class="cover-blur scroll">
+        <section class="cover-blur scroll" id="s2">
             <h1>O que temos a oferecer:</h1>
             <section class="hold">
                 <article class="card scroll">
@@ -62,9 +62,10 @@
                         <h1>Essência pesadelo</h1>
                     </div>
                     <div class="conteudo">
-                        <img src="" alt="">
-                        <span></span>
-                        <p></p>
+                        <img src="../imagenstrabaio/Nightmare_essence.webp" alt="">
+                        <span>Essências capazes de liberar uma força desconhecida</span>
+                        <p>Preço: ???</p>
+                        <a href="">Comprar</a>
                     </div>
                 </article>
                 <article class="card scroll">
@@ -72,16 +73,34 @@
                         <h1>ferrão dos sonhos</h1>
                     </div>
                     <div class="conteudo">
+                        <img src="../imagenstrabaio/Dream_Nail.webp" alt="">
+                        <span>Ferrão capaz de invadir a mentes dos mais poderosos aos mais ímpios</span>
+                        <p>Preço: ???</p>
+                        <a href="">Comprar</a>
+                    </div>
+                </article>
+                <article class="card scroll">
+                    <div>
+                        <h1></h1>
+                    </div>
+                    <div class="conteudo">
                         <img src="" alt="">
                         <span></span>
                         <p></p>
+                        <a href="">Comprar</a>
                     </div>
                 </article>
             </section>
         </section>
   </body>
   <script>
-    
+    const btn = document.querySelectorAll("a")
+    btn.forEach(btns =>{
+        btns.addEventListener("click", function(){
+            let m2 = document.getElementById("m4")
+            m2.play()
+        })
+    })
 const button = document.getElementById("msbutton");
 const m1 = document.getElementById("m1")
 button.addEventListener("click", function () {
@@ -93,6 +112,17 @@ button.addEventListener("click", function () {
     button.innerText = "Melodia de fundo";
   }
 });
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
+function reveal() {
+  const elefante = document.querySelectorAll(".scroll");
+  elefante.forEach((ele) => {
+    pos = ele.getBoundingClientRect().top;
 
+    if (pos < window.innerHeight - 50) {
+      ele.classList.add("sled");
+    }
+  });
+}
   </script>
 </html>

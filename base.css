@@ -3,7 +3,7 @@ body {
   background-position: center;
   background-size: cover;
   font-family: var(--regular);
-  cursor: url(t/normal.png), auto;
+  cursor: var(--cursor-normal);
 }
 @font-face {
   font-family: "hk_regular";
@@ -24,6 +24,8 @@ html {
   --transblack: rgba(15, 15, 15, 0.5);
   --cornflowerblue: rgba(100, 149, 237, 0.7);
   --regular: "hk_regular";
+  --cursor-pointer: url(t/Handwritingr.png), auto;
+  --cursor-normal: url(t/normal.png), auto;
 }
 nav {
   position: relative;
@@ -124,6 +126,15 @@ ul li a:hover::after {
   margin: 0 auto;
   padding: 0;
   margin-top: 5%;
+}
+.scroll.sled {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s all ease;
 }
 .cover-blur-foot {
   position: relative;

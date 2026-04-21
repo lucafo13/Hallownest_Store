@@ -195,19 +195,12 @@ h2 {
   align-items: center;
   color: #000000;
 }
-.scroll {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 0.5s all ease;
-}
+
 .descrition img {
   position: relative;
   width: 100%;
 }
-.scroll.sled {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 .musbutton {
   font-family: var(--regular);
   font-size: 24px;

@@ -2,6 +2,9 @@ body {
   background-image: url(https://static.wikia.nocookie.net/hollowknight/images/3/3e/Menu_Theme_The_Grimm_Troupe.png/revision/latest/scale-to-width-down/1000?cb=20220702012306&path-prefix=pt);
   text-align: center;
 }
+:root {
+  --cursor-sel: url(../t/Handwritingr.png), auto;
+}
 .descrition img {
   position: relative;
   width: 100%;
@@ -118,7 +121,9 @@ p {
   padding: auto;
 }
 .card a:hover {
-  color: black;
+  color: red;
+  font-weight: bolder;
+  cursor: url();
   background-color: #ffffff;
 }
 .card a {
@@ -127,18 +132,18 @@ p {
   font-family: var(--regular);
   font-size: var(--font-comun);
   padding: 16px 16px;
+  cursor: var(--cursor-sel);
   background-color: #2a2a2a;
   display: flex;
   position: relative;
   border-radius: 10px;
   transition: 0.4s ease;
   justify-content: center;
-  cursor: url(imagenstrabaio/selecte.png), auto;
 }
 .card a::after {
   content: "";
   width: 0%;
-  background: black;
+  background: red;
   height: 5px;
   position: absolute;
   transition: 0.4s all ease;
