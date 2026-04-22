@@ -53,3 +53,10 @@ btn.forEach((btns) => {
     m4.play();
   });
 });
+const linkout = document.getElementById("linkout");
+linkout.addEventListener("click", function(){
+  document.body.classList.add("out")
+  setTimeout(() => {
+    window.location.href="pages/grimm.html"
+  }, 1000);
+})

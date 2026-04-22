@@ -1,7 +1,12 @@
 nav {
   position: relative;
 }
-
+body.out{
+  opacity: 0;
+  pointer-events: none;
+  background-image: none;
+  background-color: #000;
+}
 ul {
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid red;
