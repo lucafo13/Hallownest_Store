@@ -1,21 +1,3 @@
-function check() {
-  let local = window.location.href;
-  document.getElementById("s11").addEventListener("click", function () {
-    if ((local = "index.html#s1")) {
-      alert("vc ja esta nesta area!");
-    }
-  });
-  document.getElementById("s22").addEventListener("click", function () {
-    if ((local = "#s2")) {
-      alert("vc ja esta nesta area!");
-    }
-  });
-  document.getElementById("s33").addEventListener("click", function () {
-    if ((local = "index.html#s3")) {
-      alert("vc ja esta nesta area!");
-    }
-  });
-}
 const m3 = document.getElementById("m3");
 const m2 = document.getElementById("m2");
 const m1 = document.getElementById("birth");
@@ -54,9 +36,64 @@ btn.forEach((btns) => {
   });
 });
 const linkout = document.getElementById("linkout");
-linkout.addEventListener("click", function(){
-  document.body.classList.add("out")
+linkout.addEventListener("click", function () {
+  document.body.classList.add("out");
   setTimeout(() => {
-    window.location.href="pages/grimm.html"
+    window.location.href = "pages/grimm.html";
   }, 1000);
-})
+});
+let carrin = [];
+let contagi = 0;
+
+function addcartbomb(nome, preco) {
+  carrin.push({ nome, preco });
+  contagi++;
+
+  document.getElementById("contador").innerText = contagi;
+  atualizacaodalistamaisgay();
+}
+
+function atualizacaodalistamaisgay() {
+  let listinha = document.getElementById("listacarrobomba");
+  listinha.innerHTML = "";
+
+  carrin.forEach((item) => {
+    listinha.innerHTML += `<p>${item.nome} - ${item.preco} geo</p>`;
+  });
+}
+
+document.getElementById("carrobomba").onclick = () => {
+  let listinha = document.getElementById("listacarrobomba");
+
+  listinha.style.display = listinha.style.display == "block" ? "none" : "block";
+};
+function sumisso() {
+  m1.pause();
+  let audio = document.getElementById("pain");
+  audio.play();
+  let tela = document.createElement("div");
+  tela.style = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    z-index: 999999;
+    opacity: 0;
+    transition: opacity 2s ease;
+  `;
+  tela.innerHTML = "<h1>Vazio.</h1>";
+  document.body.appendChild(tela);
+  setTimeout(() => {
+    tela.style.opacity = "1";
+  }, 50);
+  setTimeout(() => {
+    window.location.href = "about:blank";
+  }, 180000);
+}

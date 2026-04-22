@@ -253,90 +253,22 @@ footer {
 .infos:hover h1 {
   border-bottom: 4px solid white;
 }
-.des{
+.des {
   text-align: center;
 }
-.pop-up{
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  width: 50%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%) scale(0.95); 
-  z-index: 99999;
-    position: fixed;
-  backdrop-filter: blur(10px);
-  transition: 0.7s all cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: #2a2a2a 0 40px 40px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
- visibility: hidden;
-  opacity: 0;
-
-}
-.pop-up:target{
-  visibility: visible;
-  opacity: 1;
-  transform: translate(-50% -50%) scale(1);
-    z-index: 99999;
-}
-
-.pop-up h2{
-   color: black;
-}
-.titulo h1{
-    top: -100%;
-
-  font-size: var(--font-hyper-title);
-  letter-spacing: 2px;
-  font-family: var(--regular);
-  padding: 2px;
-  line-height: 1.5rem;
-  font-weight: bolder;
-  color: black;
-}
-.conteudo-pop p{
-  font-size: var(--font-comun);
-  font-weight: bold;
-  letter-spacing: 2px;
- 
-
-}
-.fechar a {
-  padding: 20px 160px;
-  border: 1px solid white;
-  background-color: white;
-  color: black;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.5s all;
-    font-size: var(--font-comun)
-}
-
-.fechar a:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 20px 20px rgba(15, 15, 15, 0.5);
-  background-color: rgba(15, 15, 15, 0.5);
-  border: none;
-  font-weight: bold;
-
-}
-.pop-up img{
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  align-items: center;
-}
-.feixe{
+.feixe {
   border: rgba(15, 15, 15, 0.5) 1px solid;
   border-radius: 10px;
   width: auto;
+}
 
+body.tchau {
+  background: #000;
+  background-image: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  z-index: 99999999999999;
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Gods and Nightmares</title>
   </head>
+  
   <body>
         <header class="head">
         <nav>
@@ -17,12 +18,16 @@
                 <li><a href="#s2" id="s22">Vendas</a></li>
                 <li><a href="#s3" id="s33">informação</a></li>
                 <li><a href="#s4" class="final" >end</a></li>
-                <span>Hollow knight > HK silksong</span>
+                <span>Hollow knight</span>
                 <a href="../index.html"><img src="../imagenstrabaio/logo.jpg" alt=""></a>
                 <li><a  id="linkout" class="extra">voltar</a></li>
             </ul>
         </nav>
     </header>
+    <div id="carrobomba">
+        🎒<span id="contador">0</span>
+    </div>
+    <div id="listacarrobomba"></div>
     <main >
         <audio hidden loop id="m1">
             <source src="../audios/grimmost.mp3">
@@ -66,7 +71,7 @@
                         <img src="../imagenstrabaio/Nightmare_essence.webp" alt="">
                         <span>Essências capazes de liberar uma força desconhecida</span>
                         <p>Preço: ???</p>
-                        <a href="#pop">Comprar</a>
+                        <a href="#pop" onclick="addcartbomb('E. Pesadlo', '???')">Comprar</a>
                     </div>
                 </article>
                 <article class="card scroll">
@@ -77,7 +82,7 @@
                         <img src="../imagenstrabaio/Dream_Nail.webp" alt="">
                         <span>Ferrão capaz de invadir a mentes dos mais poderosos aos mais ímpios</span>
                         <p>Preço: ???</p>
-                        <a href="#pop">Comprar</a>
+                        <a href="#pop" onclick="addcartbomb('Ferrão dos sonhos', '???')">Comprar</a>
                     </div>
                 </article>
                 <article class="card scroll">
@@ -89,7 +94,7 @@
 
                         <span>renove o ciclo com seu proprio grimm</span>
                         <p>Preço: 0,00 geo</p>
-                        <a href="#pop">Comprar</a>
+                        <a href="#pop" onclick="addcartbomb('Criança Grimm', 0)">Comprar</a>
                     </div>
                 </article>
                 <article class="card">
@@ -100,7 +105,7 @@
                     <img src="https://static.wikia.nocookie.net/hollowknight/images/a/ac/Unbreakable_Strength.png/revision/latest?cb=20220903013614&path-prefix=pt" alt="">
                     <span>Uma versão inquebravel do amuleto Força frágil</span>
                     <p>Preço: 17.000 geo</p>
-                    <a href="#pop">Comprar</a>
+                    <a href="#pop" onclick="addcartbomb('Força Inquebrável', 17000)">Comprar</a>
                     </div>
                 </article>
                                 <article class="card">
@@ -111,7 +116,7 @@
                     <img src="https://static.wikia.nocookie.net/hollowknight/images/1/15/Unbreakable_Heart.png/revision/latest?cb=20220806021014&path-prefix=pt" alt="">
                     <span>Uma versão inquebravel do amuleto Coração frágil</span>
                     <p>Preço: 12.000 geo</p>
-                    <a href="#pop">Comprar</a>
+                    <a href="#pop" onclick="addcartbomb('Coração Inquebrável', 12.000)">Comprar</a>
                     </div>
                 </article>
                                 <article class="card">
@@ -122,7 +127,7 @@
                     <img src="https://static.wikia.nocookie.net/hollowknight/images/2/2a/Unbreakable_Greed.png/revision/latest?cb=20220903013613&path-prefix=pt" alt="">
                     <span>Uma versão inquebravel do amuleto ganância frágil</span>
                     <p>Preço: 9.000 geo</p>
-                    <a href="#pop">Comprar</a>
+                    <a href="#pop" onclick="addcartbomb('Ganância Inquebrável', 9.000 )">Comprar</a>
                     </div>
                 </article>
                 
@@ -180,7 +185,7 @@ O ápice dessa descida ao abismo onírico ocorre no confronto contra o Rei do Pe
 
         </div> <br><br>
         <div class="fechar">
-            <a href="#s1">Fechar</a>
+            <a href="#s1">Foda-se</a>
         </div>
     </article>
   </body>
@@ -215,6 +220,32 @@ function reveal() {
     }
   });
 }
+
+let carrin = [];
+let contagi = 0;
+
+function addcartbomb(nome, preco) {
+  carrin.push({ nome, preco });
+  contagi++;
+
+  document.getElementById("contador").innerText = contagi;
+  atualizacaodalistamaisgay();
+}
+
+function atualizacaodalistamaisgay() {
+  let listinha = document.getElementById("listacarrobomba");
+  listinha.innerHTML = "";
+
+  carrin.forEach((item) => {
+    listinha.innerHTML += `<p>${item.nome} - ${item.preco} geo</p>`;
+  });
+}
+
+document.getElementById("carrobomba").onclick = () => {
+  let listinha = document.getElementById("listacarrobomba");
+
+  listinha.style.display = listinha.style.display == "block" ? "none" : "block";
+};
 const linkout = document.getElementById("linkout");
 linkout.addEventListener("click", function(){
   document.body.classList.add("out")
